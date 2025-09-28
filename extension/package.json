@@ -1,6 +1,6 @@
 {
   "name": "extension",
-  "displayName": "extension",
+  "displayName": "AI Code Assistant",
   "description": "AI Powered Code Optimizer and debugger",
   "version": "0.0.1",
   "engines": {
@@ -14,17 +14,71 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.helloWorld",
-        "title": "Hello World"
+        "command": "extension.optimizeCode",
+        "title": "Optimize Code",
+        "category": "AI Assistant"
       },
       {
-        "command": "myextension.openWebView",
-        "title": "Open WebView"
+        "command": "extension.debugCode",
+        "title": "Debug Code",
+        "category": "AI Assistant"
+      },
+      {
+        "command": "extension.runInSandbox",
+        "title": "Run in Sandbox",
+        "category": "AI Assistant"
+      },
+      {
+        "command": "extension.agentSettings",
+        "title": "Agent Settings",
+        "category": "AI Assistant"
+      },
+      {
+        "command": "extension.openWebView",
+        "title": "Open AI Assistant Panel",
+        "category": "AI Assistant"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "AI Code Assistant",
+      "properties": {
+        "aiCodeAssistant.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API key for AI service",
+          "order": 1
+        },
+        "aiCodeAssistant.agentType": {
+          "type": "string",
+          "enum": [
+            "optimizer",
+            "debugger",
+            "analyzer",
+            "full-stack"
+          ],
+          "default": "full-stack",
+          "description": "Type of AI agent to use",
+          "order": 2
+        },
+        "aiCodeAssistant.enableStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show AI agent status in status bar",
+          "order": 3
+        },
+        "aiCodeAssistant.autoOptimize": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically suggest optimizations",
+          "order": 4
+        }
+      }
+    }
   },
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
     "pretest": "npm run lint",
     "test": "vscode-test"
   },
@@ -34,6 +88,7 @@
     "@types/node": "22.x",
     "eslint": "^9.32.0",
     "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "prettier": "^3.0.0"
   }
 }
