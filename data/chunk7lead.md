@@ -1,6 +1,6 @@
 # 👩‍💻 Chunk 7 – Task Split by Team
 
-## 🔹 Lokesh (Leader – CI/CD Setup)
+## 🔹 Tharuna (CI/CD Setup)
 
 1. **Linting Setup**
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 🔹 Tharuna + Charan (Support & Testing)
+## 🔹 Lokesh (Leader - Support & Testing)
 
 1. **Tests Integration**
 
