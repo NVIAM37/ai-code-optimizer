@@ -1,4 +1,19 @@
 # changes by NVIAM 
+## Updates by Diksha – Chunk 2 (Backend Service)
+
+### Date: 03 Oct 2025
+- Implemented FastAPI backend structure under `/backend`.
+- Added endpoints:
+  - `/optimize` – returns dummy optimized code.
+  - `/debug` – returns dummy debugged code.
+  - `/run` – returns dummy code execution response.
+  - `/metrics` – returns dummy energy usage data.
+  - `/agent/switch` – switches between AI agents.
+  - `/stream` – WebSocket for live updates.
+- Integrated `.env` support using `python-dotenv` for agent configurations.
+- Successfully tested all endpoints via Swagger and Postman.
+- Verified WebSocket connection using Python `websockets` client.
+
 
 # Update Instructions – Chunk 7 & 
 
