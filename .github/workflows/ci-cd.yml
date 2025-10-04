@@ -1,0 +1,58 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./extension
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.mjs --fix
+        working-directory: ./extension
+      - name: Run Prettier Check
+        run: npx prettier --check "**/*.{js,json,md}"
+        working-directory: ./extension
+
+  lint-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install Flake8
+        run: pip install flake8
+      - name: Run Flake8
+        run: flake8 ./backend
+
+  build-extension:
+    runs-on: ubuntu-latest
+    needs: lint-extension
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./extension
+      - name: Package VSIX
+        run: npm install -g vsce && vsce package
+        working-directory: ./extension
+      - name: Upload VSIX Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ai-code-optimizer-extension
+          path: ./extension/*.vsix
