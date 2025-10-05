@@ -31,3 +31,12 @@ All updates from NVIAM for **Chunk 7** or the **README** should be properly adde
    - Reflect changes in project scope, chunk deliverables, or team responsibilities.
    - Ensure the structure remains clean and professional.
    - Avoid adding emojis; use arrows or clean formatting. 
+
+## Updates by Tharuna – Chunk 7 (CI/CD)
+
+### Date: 04 Oct 2025
+- Created dummy GitHub Actions workflow for automatic linting and VSIX build.
+- Frontend: ESLint + Prettier checks.
+- Backend: Flake8 linting.
+- `.vsix` artifact generated automatically for testing.
+- This is a dummy setup; real integration will be added later.
