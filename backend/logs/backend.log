@@ -1,0 +1,13 @@
+2025-10-06 15:47:30,517 - INFO - Logger initialized
+2025-10-06 15:47:50,710 - INFO - Logger initialized
+2025-10-06 15:48:12,271 - INFO - /metrics called at 2025-10-06T15:48:12.271511
+2025-10-06 15:50:17,497 - INFO - Logger initialized
+2025-10-06 15:50:36,060 - INFO - /metrics called at 2025-10-06T15:50:36.059951
+2025-10-06 15:50:48,224 - INFO - / called at 2025-10-06T15:50:48.224311
+2025-10-06 15:51:50,216 - INFO - /optimize called at 2025-10-06T15:51:50.216148
+2025-10-06 15:53:43,430 - INFO - WebSocket connection established at 2025-10-06T15:53:43.430494
+2025-10-06 15:53:43,444 - INFO - WebSocket processing completed at 2025-10-06T15:53:43.444221
+2025-10-06 15:53:43,452 - INFO - WebSocket connection closed at 2025-10-06T15:53:43.452887
+2025-10-06 15:53:54,587 - INFO - WebSocket connection established at 2025-10-06T15:53:54.587089
+2025-10-06 15:53:54,590 - INFO - WebSocket processing completed at 2025-10-06T15:53:54.590885
+2025-10-06 15:53:54,597 - INFO - WebSocket connection closed at 2025-10-06T15:53:54.597420
