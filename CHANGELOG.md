@@ -1,3 +1,14 @@
+
+Updates by Nishanth – Chunk 2 (Backend Service & Logging)
+Date: 06 Oct 2025
+
+Added custom logging:
+Logs all endpoint calls and WebSocket connections.
+Logs both to console and backend.log file.
+Logs timestamped entries for request tracking and error handling.
+Successfully tested all endpoints via Swagger UI and Postman.
+Verified WebSocket connection using Python websockets client.
+=======
 # changes by NVIAM 
 ## Updates by Diksha – Chunk 2 (Backend Service)
 
@@ -40,3 +51,4 @@ All updates from NVIAM for **Chunk 7** or the **README** should be properly adde
 - Backend: Flake8 linting.
 - `.vsix` artifact generated automatically for testing.
 - This is a dummy setup; real integration will be added later.
+
