@@ -1,0 +1,75 @@
+{
+    "root": true,
+    "env": {
+        "node": true,
+        "es2020": true,
+        "mocha": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "globals": {
+        "acquireVsCodeApi": "readonly",
+        "vscode": "readonly"
+    },
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "no-unused-vars": ["error", { 
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_"
+        }],
+        "no-console": "off",
+        "indent": ["error", 4],
+        "comma-dangle": ["error", "never"],
+        "no-trailing-spaces": "error",
+        "eol-last": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2 }],
+        "space-before-function-paren": ["error", "never"],
+        "keyword-spacing": ["error", { "before": true, "after": true }],
+        "space-infix-ops": "error",
+        "object-curly-spacing": ["error", "always"],
+        "array-bracket-spacing": ["error", "never"],
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "no-var": "error",
+        "prefer-const": "error",
+        "no-unused-expressions": "error",
+        "no-duplicate-imports": "error",
+        "no-unreachable": "error",
+        "consistent-return": "error",
+        "curly": ["error", "all"],
+        "default-case": "error",
+        "eqeqeq": ["error", "always"],
+        "no-empty-function": "warn",
+        "no-eval": "error",
+        "no-implied-eval": "error",
+        "no-new-func": "error",
+        "no-return-assign": "error",
+        "no-self-compare": "error",
+        "no-throw-literal": "error",
+        "prefer-promise-reject-errors": "error",
+        "radix": "error"
+    },
+    "overrides": [
+        {
+            "files": ["test/**/*.js"],
+            "env": {
+                "mocha": true
+            },
+            "rules": {
+                "no-unused-expressions": "off"
+            }
+        },
+        {
+            "files": ["*.json"],
+            "rules": {
+                "quotes": ["error", "double"]
+            }
+        }
+    ]
+}
