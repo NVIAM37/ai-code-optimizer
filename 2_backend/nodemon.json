@@ -1,0 +1,12 @@
+{
+    "watch": [
+        "src"
+    ],
+    "ignore": [
+        "temp_execution/**",
+        "node_modules/**",
+        "*.log"
+    ],
+    "ext": "js,mjs,cjs,json",
+    "verbose": false
+}
